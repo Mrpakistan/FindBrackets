@@ -1,0 +1,21 @@
+{
+  "name": "bayoujuju/find-brackets",
+  "description": "FindBrackets teacher widget for my project",
+  "license": "MIT",
+  "homepage": "https://github.com/Mrpakistan/FindBrackets",
+  "authors": [
+    {
+      "name": "BayouJuJu company",
+      "email": "Macro-world@mail.ru",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">= 5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "App"
+    }
+  }
+}
