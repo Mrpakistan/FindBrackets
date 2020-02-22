@@ -7,5 +7,5 @@ require_once 'App/MyErrorHandler.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') die('Войдите из консоли!!!!!');
 
-
+// hm
 $test = new FindBrackets();
