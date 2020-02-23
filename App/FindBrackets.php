@@ -5,22 +5,22 @@ namespace App;
 
 class FindBrackets
 {
-    private $str;
+    public $str;
 
-    public function __construct()
+    public function __construct($string)
     {
         try {
-            $this->checkStr();
+            $this->checkStr($string);
             echo 'Всё хорошо';
         } catch (MyErrorHandler $e) {
             echo $e->getMessage();
         }
     }
 
-    public function checkStr()
+    public function checkStr($string)
     {
 
-        $this->str = $this->getStr();
+        $this->str = $this->getStr($string);
         $left_b = substr_count($this->str, '(');
         $right_b = substr_count($this->str, ')');
         if (preg_match_all('#^[^(]+|[^\s()]+|[^)]+$#', $this->str, $matches)) {
@@ -53,11 +53,11 @@ class FindBrackets
 
     }
 
-    public function getStr(): string
+    public function getStr(string $string): string
     {
         $str = null;
         while (!$str) {
-            $str = readline("Введите данные: ");
+            $str = $string;
         }
         return $str;
     }
